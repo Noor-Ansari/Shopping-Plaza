@@ -96,4 +96,7 @@ const Items = [
     price: "2499.00",
     desc: "This is dummy data to show at the place of data description"}]
 
+
+
+    
 export default Items;

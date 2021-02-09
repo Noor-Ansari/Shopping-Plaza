@@ -1,4 +1,3 @@
-
 .nav-wrapper{
     display: flex;
     justify-content: space-between;
@@ -19,20 +18,22 @@ li, button {
     font-size: 20px;
 }
 
-.nav_links button{
+.nav_links .link{
     background-color: white;
     border:none;
     font-size: 20px;
+    padding: 0px 4px;
+    text-decoration: none;
     transition: all 0.3s ease 0s;
 }
-.nav_links button:hover{
+.nav_links .link:hover{
     color: #0088a9;
 }
 
 #brand{
     text-decoration: none;
-    font-size: 30px;
-    font-weight: 600;
+    font-size: 36px;
+    font-weight: 700;
 }
 
 @media only screen and (max-width:600px){
@@ -43,9 +44,13 @@ li, button {
         font-size: 20px;
         font-weight: 400;
     }
-    .nav_links button{
+    .nav_links .link{
         padding: 0px 4px;
         font-size: 10px;
+    }
+    .nav_links .link:hover{
+        color: #0088a9;
+        font-size: 12px;
     }
 
 }

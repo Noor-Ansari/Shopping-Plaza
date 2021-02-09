@@ -1,25 +1,20 @@
 import React, {useContext} from 'react';
 import "./Navbar.css";
 import {Context} from "../Context";
+import {Link} from "react-router-dom";
 
 function Navbar() {
     const context = useContext(Context);
-
-    function clickHandler(action){
-        context.setPage(action)
-    }
-
     return (
         <header className="nav-wrapper">
-            <a id="brand" href="/">Shopping Plaza</a>    
+            <Link id="brand" to="/">Shopping Plaza</Link>    
             <nav>
                 <ul className="nav_links"> 
-                    <li><button id="home" onClick={()=>clickHandler("product")}>Home</button></li>
-                    <li><button id="cart" onClick={()=>clickHandler("cart")}>My cart ({context.cart.length})</button></li>
+                    <li><Link to="/" className="link">Home</Link></li>
+                    <li><Link to="/cart" className="link">My cart ({context.cart.length})</Link></li>
                 </ul>  
             </nav> 
         </header>
     )
 }
-
 export default Navbar;
